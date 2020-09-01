@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC7DE3C9-F4B8-4533-B4EF-606F2B213FB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bajaj.Dinesh.Biller</RootNamespace>
+    <AssemblyName>Biller</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Bajaj.Dinesh.Biller.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>invoice_32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ErikEJ.SqlCe40, Version=2.1.6.14, Culture=neutral, PublicKeyToken=03b0b5a60fec3719, processorArchitecture=MSIL">
+      <HintPath>..\packages\ErikEJ.SqlCeBulkCopy.2.1.6.15\lib\net40\ErikEJ.SqlCe40.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Salient.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03b0b5a60fec3719, processorArchitecture=MSIL">
+      <HintPath>..\packages\ErikEJ.SqlCeBulkCopy.2.1.6.15\lib\net40\Salient.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReports\BillPrintoutReport.cs">
+      <DependentUpon>BillPrintoutReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CrystalReports\CustomerAccountReport.cs">
+      <DependentUpon>CustomerAccountReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CrystalReports\CustomerBalanceListReport.cs">
+      <DependentUpon>CustomerBalanceListReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Datasets\AccountStatementDataSet.cs">
+      <DependentUpon>AccountStatementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ErrorLogger.cs" />
+    <Compile Include="Forms\AccountStatementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountStatementView.Designer.cs">
+      <DependentUpon>AccountStatementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\AccountStatementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountStatementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerAccount.Designer.cs">
+      <DependentUpon>CustomerAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillReportView.Designer.cs">
+      <DependentUpon>BillReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BackupDatabase.Designer.cs">
+      <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteFinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteFinancialYear.Designer.cs">
+      <DependentUpon>DeleteFinancialYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountBalanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountBalanceList.Designer.cs">
+      <DependentUpon>AccountBalanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\BalanceListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalanceListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BalanceListReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BalanceListReportView.Designer.cs">
+      <DependentUpon>BalanceListReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\BillItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillMaster.Designer.cs">
+      <DependentUpon>BillMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillView.Designer.cs">
+      <DependentUpon>BillView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillViewCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillViewCriteria.Designer.cs">
+      <DependentUpon>BillViewCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Configuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration.Designer.cs">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateFinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateFinancialYear.Designer.cs">
+      <DependentUpon>CreateFinancialYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerMaster.Designer.cs">
+      <DependentUpon>CustomerMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FinancialYear.cs" />
+    <Compile Include="Forms\FirmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FirmDetails.Designer.cs">
+      <DependentUpon>FirmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GlobalMethods.cs" />
+    <Compile Include="Classes\Global.cs" />
+    <Compile Include="Forms\ItemMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemMaster.Designer.cs">
+      <DependentUpon>ItemMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIForm.Designer.cs">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentReceive.Designer.cs">
+      <DependentUpon>PaymentReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentView.Designer.cs">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Forms\OpenFinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenFinancialYear.Designer.cs">
+      <DependentUpon>OpenFinancialYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RestoreDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RestoreDatabase.Designer.cs">
+      <DependentUpon>RestoreDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\InterDatabaseDataTransfer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Forms\UnitOfMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitOfMeasurement.Designer.cs">
+      <DependentUpon>UnitOfMeasurement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReports\BillPrintoutReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BillPrintoutReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\CustomerAccountReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerAccountReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\CustomerBalanceListReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerBalanceListReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountStatementView.resx">
+      <DependentUpon>AccountStatementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerAccount.resx">
+      <DependentUpon>CustomerAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillReportView.resx">
+      <DependentUpon>BillReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BackupDatabase.resx">
+      <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteFinancialYear.resx">
+      <DependentUpon>DeleteFinancialYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountBalanceList.resx">
+      <DependentUpon>AccountBalanceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BalanceListReportView.resx">
+      <DependentUpon>BalanceListReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillMaster.resx">
+      <DependentUpon>BillMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillView.resx">
+      <DependentUpon>BillView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillViewCriteria.resx">
+      <DependentUpon>BillViewCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration.resx">
+      <DependentUpon>Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateFinancialYear.resx">
+      <DependentUpon>CreateFinancialYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerMaster.resx">
+      <DependentUpon>CustomerMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FirmDetails.resx">
+      <DependentUpon>FirmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemMaster.resx">
+      <DependentUpon>ItemMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIForm.resx">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentReceive.resx">
+      <DependentUpon>PaymentReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentView.resx">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenFinancialYear.resx">
+      <DependentUpon>OpenFinancialYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RestoreDatabase.resx">
+      <DependentUpon>RestoreDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\UnitOfMeasurement.resx">
+      <DependentUpon>UnitOfMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Datasets\AccountStatementDataSet.xsc">
+      <DependentUpon>AccountStatementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\AccountStatementDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountStatementDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\AccountStatementDataSet.xss">
+      <DependentUpon>AccountStatementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\BalanceListDataSet.xsc">
+      <DependentUpon>BalanceListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\BalanceListDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BalanceListDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\BalanceListDataSet.xss">
+      <DependentUpon>BalanceListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\BillItemsDataSet.xsc">
+      <DependentUpon>BillItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\BillItemsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillItemsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\BillItemsDataSet.xss">
+      <DependentUpon>BillItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_16_2.png" />
+    <None Include="Resources\refresh_16_1.png" />
+    <None Include="Resources\refresh_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_invoice_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_item_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_payment_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuration_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explore_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseScript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="invoice_32.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

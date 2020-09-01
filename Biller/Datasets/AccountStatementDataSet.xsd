@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccountStatementDataSet" targetNamespace="http://tempuri.org/AccountStatementDataSet.xsd" xmlns:mstns="http://tempuri.org/AccountStatementDataSet.xsd" xmlns="http://tempuri.org/AccountStatementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccountStatementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AccountStatementDataSet" msprop:Generator_UserDSName="AccountStatementDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountStatement" msprop:Generator_TableClassName="AccountStatementDataTable" msprop:Generator_TableVarName="tableAccountStatement" msprop:Generator_TablePropName="AccountStatement" msprop:Generator_RowDeletingName="AccountStatementRowDeleting" msprop:Generator_UserTableName="AccountStatement" msprop:Generator_RowChangingName="AccountStatementRowChanging" msprop:Generator_RowEvHandlerName="AccountStatementRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountStatementRowDeleted" msprop:Generator_RowEvArgName="AccountStatementRowChangeEvent" msprop:Generator_RowChangedName="AccountStatementRowChanged" msprop:Generator_RowClassName="AccountStatementRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="DebitAmount" msprop:Generator_ColumnVarNameInTable="columnDebitAmount" msprop:Generator_ColumnPropNameInRow="DebitAmount" msprop:Generator_ColumnPropNameInTable="DebitAmountColumn" msprop:Generator_UserColumnName="DebitAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SerialNumber" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSerialNumber" msprop:Generator_ColumnPropNameInRow="SerialNumber" msprop:Generator_ColumnPropNameInTable="SerialNumberColumn" msprop:Generator_UserColumnName="SerialNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="CreditAmount" msprop:Generator_ColumnVarNameInTable="columnCreditAmount" msprop:Generator_ColumnPropNameInRow="CreditAmount" msprop:Generator_ColumnPropNameInTable="CreditAmountColumn" msprop:Generator_UserColumnName="CreditAmount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:AccountStatement" />
+      <xs:field xpath="mstns:SerialNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
