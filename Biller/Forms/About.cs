@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Bajaj.Dinesh.Biller
 {
+    //http://dineshbajajktn.blogspot.in/
     internal sealed partial class About : Form
     {
         public About()
@@ -27,7 +28,7 @@ namespace Bajaj.Dinesh.Biller
 
         private void emailAddressLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string text = "mailto:dinesh.bajaj@ymail.com";
+            string text = "mailto:aliabbasvohra@gmail.com";
             System.Diagnostics.Process.Start(text);
             emailAddressLinkLabel.LinkVisited = true;
         }

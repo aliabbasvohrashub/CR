@@ -89,9 +89,9 @@
             this.authorNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authorNameLabel.Location = new System.Drawing.Point(130, 94);
             this.authorNameLabel.Name = "authorNameLabel";
-            this.authorNameLabel.Size = new System.Drawing.Size(96, 16);
+            this.authorNameLabel.Size = new System.Drawing.Size(115, 16);
             this.authorNameLabel.TabIndex = 4;
-            this.authorNameLabel.Text = "Dinesh Bajaj";
+            this.authorNameLabel.Text = "Aliabbas Vohra";
             // 
             // label3
             // 
@@ -109,10 +109,10 @@
             this.emailAddressLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailAddressLinkLabel.Location = new System.Drawing.Point(130, 119);
             this.emailAddressLinkLabel.Name = "emailAddressLinkLabel";
-            this.emailAddressLinkLabel.Size = new System.Drawing.Size(156, 16);
+            this.emailAddressLinkLabel.Size = new System.Drawing.Size(171, 16);
             this.emailAddressLinkLabel.TabIndex = 6;
             this.emailAddressLinkLabel.TabStop = true;
-            this.emailAddressLinkLabel.Text = "dinesh.bajaj@ymail.com";
+            this.emailAddressLinkLabel.Text = "aliabbasvohra@gmail.com";
             this.emailAddressLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.emailAddressLinkLabel_LinkClicked);
             // 
             // label2
@@ -131,10 +131,8 @@
             this.blogURLLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blogURLLinkLabel.Location = new System.Drawing.Point(130, 144);
             this.blogURLLinkLabel.Name = "blogURLLinkLabel";
-            this.blogURLLinkLabel.Size = new System.Drawing.Size(200, 16);
+            this.blogURLLinkLabel.Size = new System.Drawing.Size(0, 16);
             this.blogURLLinkLabel.TabIndex = 8;
-            this.blogURLLinkLabel.TabStop = true;
-            this.blogURLLinkLabel.Text = "http://dineshbajajktn.blogspot.in/";
             this.blogURLLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.blogURLLinkLabel_LinkClicked);
             // 
             // label4
@@ -153,9 +151,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(130, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 16);
+            this.label5.Size = new System.Drawing.Size(154, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "(07622) 422192";
+            this.label5.Text = "9662428480, 7984303964";
             // 
             // About
             // 

@@ -16,14 +16,14 @@ namespace Bajaj.Dinesh.Biller.CrystalReports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class TestReport : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public TestReport() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "TestReport.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Bajaj.Dinesh.Biller.CrystalReports {
         
         public override string FullResourceName {
             get {
-                return "Bajaj.Dinesh.Biller.CrystalReports.TestReport.rpt";
+                return "Bajaj.Dinesh.Biller.CrystalReports.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Bajaj.Dinesh.Biller.CrystalReports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedTestReport : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedTestReport() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Bajaj.Dinesh.Biller.CrystalReports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            TestReport rpt = new TestReport();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }
